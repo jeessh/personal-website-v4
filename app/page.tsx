@@ -21,7 +21,7 @@ export default function Home() {
             <h2>Hey there! I&apos;m</h2>
             <h1>Jesse huang</h1>
             <div className={"w-4/4 h-0.5 bg-slate-100 m-1 mb-3"} />
-            <h2>Full-Stack Developer</h2>
+            <h2>Full-Stack Developer | UW CS &apos;27</h2>
           </div>
         </div>
         <div
