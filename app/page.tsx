@@ -33,17 +33,13 @@ export default function Home() {
         <div className="w-20 h-20 border bg-icon rounded-full"></div>
         <div className="mt-16">
           <h2 className="">
-            I&apos;m a 2nd year Computer Science Major at the University of
+            I&apos;m a 3rd year Computer Science Major at the University of
             Waterloo.
           </h2>
           <h2>
             If I&apos;m ever able to find time between work sessions, I enjoy
             watching the NBA, playing volleyball, and getting my 8 hours of
             sleep
-          </h2>
-          <h2>
-            However, nothing gives me a better feeling than beating those pesky
-            errors!
           </h2>
         </div>
       </section>
