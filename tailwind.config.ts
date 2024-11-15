@@ -11,7 +11,10 @@ const config: Config = {
     extend: {
       colors: {
         'icon': "#372D44",
-        'line': "#CCCCCC"
+        'line': "#CCCCCC",
+        'background': "#FFFEF9",
+        'button': "#ECDFCC",
+        'button-border': "#B19F97"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

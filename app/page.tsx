@@ -1,47 +1,55 @@
+"use client";
+
+import { useRef } from "react";
 import Image from "next/image";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Sidebar } from "./components/Sidebar/Sidebar";
+import { Scrollbar } from "./components/Scrollbar/Scrollbar";
 import HeroImage from "./assets/colour_palette.svg";
+import work from "./assets/work.svg";
 
 export default function Home() {
+  const temp1 = useRef(null);
+  const temp2 = useRef(null);
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col items-center">
       <Navbar />
       <Sidebar />
-      <section className="h-screen flex ml-56 relative" id={"home"}>
-        <div className="flex items-center ">
-          <Image
-            src={HeroImage}
-            alt="headshot"
-            width={400}
-            height={500}
-            className="relative z-1"
-          />
-          <div className="ml-10">
-            <h2>Hey there! I&apos;m</h2>
-            <h1>Jesse huang</h1>
-            <div className="w-4/4 h-0.5 bg-slate-100 m-1 mb-3" />
-            <h2>Full-Stack Developer | UW CS &apos;27</h2>
+      <section className="h-screen flex relative" id={"home"}>
+        <div className="flex items-center">
+          <div className="relative w-[400px] h-[500px]">
+            <Image
+              src={HeroImage}
+              alt="headshot"
+              className="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px]"
+            />
+            <div className="absolute bg-background w-full h-screen bottom-[10.5rem] z-10" />
+          </div>
+          <div className="ml-16 flex flex-col">
+            <div className="mb-4">
+              <h2>
+                Hey there! I&apos;m <b>Jesse</b> 👋
+              </h2>
+              <h2>
+                a <b>full-stack developer</b>
+              </h2>
+              <h2>
+                and <i>lo-fi beats enjoyer</i>
+              </h2>
+            </div>
+            <div className="mb-12">
+              <h3>Computer Science @ UWaterloo</h3>
+            </div>
+            <div className="bg-button w-1/2 h-12 rounded-full border-2 border-button-border"></div>
           </div>
         </div>
-        <div className="absolute w-0.5 h-3/4 ml-10 bg-line left-0 -z-10" />
       </section>
+      <Scrollbar Icon={work} start={temp1} end={temp2}/>
       <section
         className="h-screen flex flex-col ml-56 relative"
-        id={"personal"}
+        id={"work"}
+        ref={temp2}
       >
-        <div className="w-20 h-20 border bg-icon rounded-full"></div>
-        <div className="mt-16">
-          <h2 className="">
-            I&apos;m a 3rd year Computer Science Major at the University of
-            Waterloo.
-          </h2>
-          <h2>
-            If I&apos;m ever able to find time between work sessions, I enjoy
-            watching the NBA, playing volleyball, and getting my 8 hours of
-            sleep
-          </h2>
-        </div>
       </section>
     </main>
   );

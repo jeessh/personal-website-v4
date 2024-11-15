@@ -12,10 +12,7 @@ export function Sidebar() {
             <Link href="#home" className="block m-8 scroll-smooth">
                 <Image src={home} alt="home" width={32} height={32} />
             </Link>
-            <Link href="#personal" className="block m-8">
-                <Image src={personal} alt="personal" width={32} height={32} />
-            </Link>
-            <Link href="#work" className="block m-8">
+            <Link href="#work" className="block m-8 scroll-smooth">
                 <Image src={work} alt="work" width={32} height={32} />
             </Link>
             <Link href="#contact" className="block m-8">
