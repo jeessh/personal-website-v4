@@ -13,7 +13,13 @@ import arrow from "./assets/arrow_down.svg";
 export default function Home() {
   const temp1 = useRef(null);
   const temp2 = useRef(null);
+  const audioRef = useRef<HTMLAudioElement>(null); // Reference to the audio element
 
+  const playAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.play(); // Start playing the audio
+    }
+  };
   return (
     <main className="flex min-h-screen flex-col items-center">
       <Navbar />
@@ -53,6 +59,11 @@ export default function Home() {
             className="absolute bottom-24 left-1/2 transform -translate-x-1/2 w-12 h-12 animate-bounce"
           />
         </div>
+        <audio ref={audioRef} loop>
+        <source src="temp.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <button onClick={playAudio}>Play Forever</button>
       </section>
       <Scrollbar Icon={work} start={temp1} end={temp2} />
       <section
