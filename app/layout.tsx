@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 import Head from "next/head";
 import "./globals.css";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-bricolage',
+});
 
 export const metadata: Metadata = {
   title: "Jesse Huang",
@@ -15,14 +19,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log(montserrat)
-  
   return (
-    <html lang="en">
+    <html lang="en" className={bricolage.variable}>
       <Head>
-      <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={montserrat.className}>{children}</body>
+      <body className={bricolage.className}>{children}</body>
     </html>
   );
 }

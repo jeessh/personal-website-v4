@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config: Config = {
   content: [
@@ -6,9 +7,11 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {      
-
+  theme: {
     extend: {
+      fontFamily: {
+        bricolage: ['var(--font-bricolage)', ...(fontFamily.sans as string[])],
+      },
       colors: {
         'icon': "#372D44",
         'line': "#CCCCCC",
@@ -25,4 +28,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;
