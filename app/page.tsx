@@ -19,6 +19,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 export default function Home() {
   const scrollPersonal = useRef(null);
   const scrollWork = useRef(null);
+  const scrollContact = useRef(null);
 
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -52,6 +53,17 @@ export default function Home() {
     damping: 40,
     restDelta: 0.001,
   });
+
+  const { scrollYProgress: scrollContactProgress } = useScroll({
+    target: scrollContact,
+    offset: ["end end", "start center"]
+  });
+    const scaleContactY = useSpring(scrollContactProgress, {
+    stiffness: 300,
+    damping: 40,
+    restDelta: 0.001,
+  });
+  
   return (
     <main className="flex min-h-screen flex-col items-center relative">
       <Navbar />
@@ -182,7 +194,7 @@ export default function Home() {
         <section className="flex flex-col items-center max-lg:hidden relative -translate-y-32 -z-10">
           <motion.div
             style={{ scaleY: scaleWorkY }}
-            className="w-0.5 mr-[52rem] bg-line h-64"
+            className="w-0.5 mr-[52rem] bg-line h-72"
             
           />
           <div className="w-24 h-24 border-line border drop-shadow-md bg-button rounded-full mr-[52rem] flex justify-center">
@@ -192,29 +204,47 @@ export default function Home() {
       </>
       </div>
       <section
-        className="flex flex-col mx-16 relative bg-background max-lg:mt-24"
+        className="flex flex-col mx-16 relative bg-background max-lg:mt-24 gap-12"
       >
         <ProjectCard
-          title="WSIB"
-          subtitle="Description 1"
+          title="Full Stack Developer @ WSIB Innovation Lab"
+          subtitle="Prototyping & Innovating"
           imageUrl={tempimg}
-          link="/project1"
+          link="/experiences/wsib"
           position="left"
         />
         <ProjectCard
-          title="Marillac Place"
-          subtitle="Description 2"
+          title="Technical Lead & SWE @ Marillac Place"
+          subtitle=""
           imageUrl={tempimg}
-          link="/project2"
+          link="/experiences/marillac"
           position="right"
         />
         <ProjectCard
-          title="Wiz Robotics"
+          title="SWE & Frontend @ Wiz Robotics"
           subtitle="Description 3"
           imageUrl={tempimg}
-          link="/project3"
+          link="/experiences/wiz"
           position="left"
         />
+      </section>
+      <div id="contact" className="relative w-full flex flex-col items-center">
+        {/* Work scrollbar position */}
+      <>
+        <section className="flex flex-col items-center max-lg:hidden relative -translate-y-32 -z-10">
+          <motion.div
+            style={{ scaleY: scaleContactY }}
+            className="w-0.5 mr-[52rem] bg-line h-64"
+            
+          />
+          <div className="w-24 h-24 border-line border drop-shadow-md bg-button rounded-full mr-[52rem] flex justify-center">
+            <Image src={contact} alt="Scrollbar icon" className="" ref={scrollContact} />
+          </div>
+        </section>
+      </>
+      </div>
+      <section className="h-screen">
+        hehe connect w me
       </section>
     </main>
   );
