@@ -7,6 +7,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import { Scrollbar } from "./components/Scrollbar/Scrollbar";
 import { ProjectCard } from "./components/ProjectCard/ProjectCard";
+import { Footer } from "./components/Footer/Footer";
 
 import HeroImage from "./assets/colour_palette.svg";
 import personal from "./assets/personal.svg";
@@ -46,9 +47,9 @@ export default function Home() {
 
   const { scrollYProgress: scrollWorkProgress } = useScroll({
     target: scrollWork,
-    offset: ["end end", "start center"]
+    offset: ["end end", "start center"],
   });
-    const scaleWorkY = useSpring(scrollWorkProgress, {
+  const scaleWorkY = useSpring(scrollWorkProgress, {
     stiffness: 300,
     damping: 40,
     restDelta: 0.001,
@@ -56,14 +57,14 @@ export default function Home() {
 
   const { scrollYProgress: scrollContactProgress } = useScroll({
     target: scrollContact,
-    offset: ["end end", "start center"]
+    offset: ["end end", "start center"],
   });
-    const scaleContactY = useSpring(scrollContactProgress, {
+  const scaleContactY = useSpring(scrollContactProgress, {
     stiffness: 300,
     damping: 40,
     restDelta: 0.001,
   });
-  
+
   return (
     <main className="flex min-h-screen flex-col items-center relative">
       <Navbar />
@@ -106,10 +107,14 @@ export default function Home() {
           <motion.div
             style={{ scaleY: scalePersonalY }}
             className="w-0.5 mr-[52rem] bg-line -z-10 h-screen"
-            
           />
           <div className="w-24 h-24 border-line border drop-shadow-md bg-button rounded-full mr-[52rem] flex justify-center">
-            <Image src={personal} alt="Scrollbar icon" className="" ref={scrollPersonal}/>
+            <Image
+              src={personal}
+              alt="Scrollbar icon"
+              className=""
+              ref={scrollPersonal}
+            />
           </div>
         </section>
         <div className="max-lg:hidden w-1/2 mt-36"></div>
@@ -183,29 +188,31 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             viewport={{ once: false, margin: "-25% 0px -40% 0px" }}
           >
-            copium.
+            Nah, Ima do my own thing.
           </motion.h4>
         </motion.div>
       </section>
 
       <div id="work" className="relative w-full flex flex-col items-center">
         {/* Work scrollbar position */}
-      <>
-        <section className="flex flex-col items-center max-lg:hidden relative -translate-y-32 -z-10">
-          <motion.div
-            style={{ scaleY: scaleWorkY }}
-            className="w-0.5 mr-[52rem] bg-line h-72"
-            
-          />
-          <div className="w-24 h-24 border-line border drop-shadow-md bg-button rounded-full mr-[52rem] flex justify-center">
-            <Image src={work} alt="Scrollbar icon" className="" ref={scrollWork} />
-          </div>
-        </section>
-      </>
+        <>
+          <section className="flex flex-col items-center max-lg:hidden relative -translate-y-32 -z-10">
+            <motion.div
+              style={{ scaleY: scaleWorkY }}
+              className="w-0.5 mr-[52rem] bg-line h-72"
+            />
+            <div className="w-24 h-24 border-line border drop-shadow-md bg-button rounded-full mr-[52rem] flex justify-center">
+              <Image
+                src={work}
+                alt="Scrollbar icon"
+                className=""
+                ref={scrollWork}
+              />
+            </div>
+          </section>
+        </>
       </div>
-      <section
-        className="flex flex-col mx-16 relative bg-background max-lg:mt-24 gap-12"
-      >
+      <section className="flex flex-col mx-16 relative bg-background max-lg:mt-24 gap-12">
         <ProjectCard
           title="Full Stack Developer @ WSIB Innovation Lab"
           subtitle="Prototyping & Innovating"
@@ -228,24 +235,37 @@ export default function Home() {
           position="left"
         />
       </section>
-      <div id="contact" className="relative w-full flex flex-col items-center">
+      <div
+        id="contact"
+        className="relative w-full flex flex-col items-center h-screen"
+      >
         {/* Work scrollbar position */}
-      <>
-        <section className="flex flex-col items-center max-lg:hidden relative -translate-y-32 -z-10">
-          <motion.div
-            style={{ scaleY: scaleContactY }}
-            className="w-0.5 mr-[52rem] bg-line h-64"
-            
-          />
-          <div className="w-24 h-24 border-line border drop-shadow-md bg-button rounded-full mr-[52rem] flex justify-center">
-            <Image src={contact} alt="Scrollbar icon" className="" ref={scrollContact} />
-          </div>
-        </section>
-      </>
+        <>
+          <div className="h-[10dvh] w-[70dvw] absolute bg-background"></div>
+          <section className="flex flex-col items-center max-lg:hidden relative -translate-y-64 -z-10">
+            <motion.div
+              style={{ scaleY: scaleContactY }}
+              className="w-0.5 mr-[52rem] bg-line h-[70dvh]"
+            />
+            <section className="flex relative">
+              <div className="w-24 h-24 border-line border drop-shadow-md bg-button rounded-full mr-[52rem] flex justify-center">
+                <Image src={contact} alt="Scrollbar icon" className="" />
+              </div>
+              <div
+                className="h-32 w-full absolute bottom-64"
+                ref={scrollContact}
+              ></div>
+              <section className="lg:absolute lg:ml-36 lg:-bottom-10">
+                <h2>If you think we&apos;d be a good fit,</h2>
+                <h1>Let&apos;s connect!</h1>
+                <div></div>
+              </section>
+            </section>
+          </section>
+        </>
       </div>
-      <section className="h-screen">
-        hehe connect w me
-      </section>
+
+      <Footer />
     </main>
   );
 }
