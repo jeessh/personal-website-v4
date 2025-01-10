@@ -15,6 +15,9 @@ import contact from "./assets/contact.svg";
 import work from "./assets/work.svg";
 import arrow from "./assets/arrow_down.svg";
 import tempimg from "./assets/tempimg.png";
+import wsib from "./assets/projectImages/wsibLogo.svg";
+import blueprint from './assets/projectImages/uw_blueprint_logo.jpeg';
+import wiz from './assets/projectImages/wizrobotics_logo.jpeg'
 import { motion, useScroll, useSpring } from "framer-motion";
 
 export default function Home() {
@@ -126,17 +129,17 @@ export default function Home() {
         // id={"personal"}
       >
         <motion.span
-          className="text-[2.5rem] font-[1000]"
+          className="text-[2.5rem] font-[600]"
           initial={{ opacity: 0.3 }}
           whileInView={{ opacity: 0.8 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: false, margin: "-65% 0px -32.5% 0px" }}
         >
-          I&apos;m just a 3rd year CS student trying out all that life has to
+          I&apos;m just a <strong>3rd year CS student</strong> trying out all that life has to
           offer.{" "}
         </motion.span>
         <motion.span
-          className="text-[2.5rem] font-[1000]"
+          className="text-[2.5rem] font-[600]"
           initial={{ opacity: 0.3 }}
           whileInView={{ opacity: 0.8 }}
           transition={{ duration: 0.5 }}
@@ -146,7 +149,7 @@ export default function Home() {
           courts for some v-ball 🏐.{" "}
         </motion.span>
         <motion.span
-          className="text-[2.5rem] font-[1000]"
+          className="text-[2.5rem] font-[600]"
           initial={{ opacity: 0.3 }}
           whileInView={{ opacity: 0.8 }}
           transition={{ duration: 0.5 }}
@@ -164,6 +167,7 @@ export default function Home() {
           viewport={{ once: true, margin: "-50% 0px -37.5% 0px" }}
         >
           <motion.h4
+            className="text-[2.5rem] font-[600]"
             initial={{ opacity: 0.3 }}
             whileInView={{ opacity: 0.8 }}
             transition={{ duration: 0.5 }}
@@ -183,6 +187,7 @@ export default function Home() {
           viewport={{ once: true, margin: "-50% 0px -40% 0px" }}
         >
           <motion.h4
+            className="text-[2.5rem] font-[600]"
             initial={{ opacity: 0.3 }}
             whileInView={{ opacity: 0.8 }}
             transition={{ duration: 0.5 }}
@@ -216,23 +221,20 @@ export default function Home() {
         <ProjectCard
           title="Full Stack Developer @ WSIB Innovation Lab"
           subtitle="Prototyping & Innovating"
-          imageUrl={tempimg}
+          imageUrl={wsib}
           link="/experiences/wsib"
-          position="left"
         />
         <ProjectCard
-          title="Technical Lead & SWE @ Marillac Place"
+          title="Technical Lead & SWE @ UW Blueprint"
           subtitle=""
-          imageUrl={tempimg}
+          imageUrl={blueprint}
           link="/experiences/marillac"
-          position="right"
         />
         <ProjectCard
           title="SWE & Frontend @ Wiz Robotics"
           subtitle="Description 3"
-          imageUrl={tempimg}
+          imageUrl={wiz}
           link="/experiences/wiz"
-          position="left"
         />
       </section>
       <div
