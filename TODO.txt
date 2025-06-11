@@ -1,0 +1,15 @@
+MAIN
+- navbar
+- footer (with contact)
+- quick experiences
+- quick projects
+
+ABOUT ME
+- summary
+- photos
+- 
+
+EXPERIENCES
+
+
+CONTACT
