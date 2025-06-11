@@ -14,7 +14,6 @@ import personal from "./assets/personal.svg";
 import contact from "./assets/contact.svg";
 import work from "./assets/work.svg";
 import arrow from "./assets/arrow_down.svg";
-import tempimg from "./assets/tempimg.png";
 import wsib from "./assets/projectImages/wsibLogo.svg";
 import blueprint from './assets/projectImages/uw_blueprint_logo.jpeg';
 import wiz from './assets/projectImages/wizrobotics_logo.jpeg'
