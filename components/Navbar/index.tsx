@@ -1,10 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="flex fixed w-full top-0 z-50 justify-center h-20">
+    <nav className="flex fixed w-full top-0 z-50 justify-center h-20 border-blue-300 border-2">
       <section className="w-full max-w-[1280px] flex justify-between items-center px-4 py-2">
+        <ThemeToggle/>
         <h1 className="text-xl font-semibold">
           <Link href="/" className="text-primary">JH</Link>
         </h1>

@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import ThProvider from '@/components/ThProvider';
 
 export const metadata: Metadata = {
   title: 'Personal Website',
   description: 'Jesse Huang\'s Personal Website',
 }
+
 
 export default function RootLayout({
   children,
@@ -13,8 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ThProvider>
+          {children}
+        </ThProvider>
+      </body>
     </html>
   )
 }
-

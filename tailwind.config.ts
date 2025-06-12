@@ -1,4 +1,15 @@
 import type { Config } from 'tailwindcss'
+import { colors, fontSizes, deviceBreakpoints } from './constants'
+
+const screens = {
+  'sm': `${deviceBreakpoints.mobile}px`,
+  'md': `${deviceBreakpoints.tablet}px`,
+  'lg': `${deviceBreakpoints.medium}px`,
+  'xl': `${deviceBreakpoints.large}px`,
+  'mobile': `${deviceBreakpoints.mobile}px`,
+  'tablet': `${deviceBreakpoints.tablet}px`,
+  'desktop': `${deviceBreakpoints.medium}px`,
+}
 
 const config: Config = {
   content: [
@@ -6,11 +17,14 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: '#566E52', // Define primary color
+        colors,
       },
+      fontSize: fontSizes,
+      screens,
     },
   },
   plugins: [],

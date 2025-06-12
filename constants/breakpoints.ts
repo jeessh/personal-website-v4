@@ -8,11 +8,6 @@ export type DeviceType =
   | "mobile"
   | "smallMobile";
 
-/**
- * Maximum widths in px for a screen
- * to be considered each type of
- * device.
- */
 export const deviceBreakpoints: Record<DeviceType, number> = {
   large: 1440,
   medium: 1024,
