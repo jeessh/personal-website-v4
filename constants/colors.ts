@@ -49,28 +49,7 @@ export const colors = {
     medium: '#cbd5e1',
     dark: '#94a3b8',
   },
-
-  // Dark mode semantic colors
-  dark: {
-    text: {
-      primary: '#f8fafc',
-      secondary: '#cbd5e1',
-      muted: '#94a3b8',
-      inverse: '#0f172a',
-    },
-    background: {
-      primary: '#020617',
-      secondary: '#0f172a',
-      tertiary: '#1e293b',
-      quaternary: '#334155',
-    },
-    border: {
-      light: '#334155',
-      medium: '#475569',
-      dark: '#64748b',
-    },
-  },
-
+  
   status: {
     success: '#22c55e',
     warning: '#f59e0b',

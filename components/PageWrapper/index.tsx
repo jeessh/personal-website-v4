@@ -10,11 +10,11 @@ const PageWrapper: React.FC<PageWrapperProps> = ({
   hasNavbar = false 
 }) => {
   return (
-    <main className="w-screen flex justify-center border-red-500 border-4">
+    <main className="w-screen flex justify-center">
       <section className={`
         w-full max-w-[1280px] 
         relative
-        bg-green-500 border-blue-500 border-4
+        flex flex-col items-center
         ${hasNavbar ? 'mt-20' : ''}
       `}>
         {children}
