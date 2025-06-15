@@ -3,7 +3,7 @@ MAIN
 - footer (with contact)
 - quick experiences
 - quick projects
-
+OH BIG TODO, ADD TYPING ANIMATION OT TEH THING AND ON NAVIGATE, DELETE AND RETYPE
 ABOUT ME
 - summary
 - photos
@@ -13,3 +13,5 @@ EXPERIENCES
 
 
 CONTACT
+
+
