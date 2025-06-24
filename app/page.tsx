@@ -1,14 +1,14 @@
 import React from "react";
-import PageWrapper from "../components/PageWrapper";
-import Navbar from "../components/Navbar";
+import PageWrapper from "@/components/Wrappers/PageWrapper";
 import Hero from "./home/Hero";
+import Summary from "./home/Summary";
 
 const HomePage: React.FC = () => {
   return (
     <>
-      <PageWrapper>
+      <PageWrapper hasNavbar topSpacing>
         <Hero />
-        
+        <Summary />
       </PageWrapper>
     </>
   );
