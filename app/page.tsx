@@ -8,6 +8,7 @@ const HomePage: React.FC = () => {
     <>
       <PageWrapper>
         <Hero />
+        
       </PageWrapper>
     </>
   );

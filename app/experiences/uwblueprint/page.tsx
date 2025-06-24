@@ -1,12 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import PageWrapper from "../../../components/PageWrapper";
-import Navbar from "../../../components/Navbar";
 
 const ProjectXPage: React.FC = () => {
   return (
     <>
-      <Navbar />
       <PageWrapper hasNavbar>
         <div className="container mx-auto px-4 py-8">
           <Link href="/experiences" className="text-primary hover:underline mb-4 inline-block">

@@ -1,12 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import PageWrapper from "../components/PageWrapper";
-import Navbar from "../components/Navbar";
 
 const NotFoundPage: React.FC = () => {
   return (
     <>
-      <Navbar />
       <PageWrapper hasNavbar>
         <div className="container mx-auto px-4 py-8 text-center">
           <div className="max-w-md mx-auto">

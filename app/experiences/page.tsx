@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import PageWrapper from "../../components/PageWrapper";
-import Navbar from "../../components/Navbar";
 
 const ExperiencesPage: React.FC = () => {
   const experiences = [
@@ -27,7 +26,6 @@ const ExperiencesPage: React.FC = () => {
 
   return (
     <>
-      <Navbar />
       <PageWrapper hasNavbar>
         <div className="container mx-auto px-4 py-8">
           <h1 className="text-4xl font-bold text-primary mb-6">Experiences</h1>
