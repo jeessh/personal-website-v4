@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
     <>
       <PageWrapper hasNavbar topSpacing>
         <Hero />
-        <Summary />
+        {/* <Summary /> */}
       </PageWrapper>
     </>
   );

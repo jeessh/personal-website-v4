@@ -19,8 +19,8 @@ const Hero: React.FC = () => {
           {/* Huang */}
         </h1>
       </div>
-      <h2 className="text-[4rem] font-semibold text-colors-primary-600 self-end">
-        UW CS'27
+      <h2 className="text-[4rem] font-semibold text-colors-primary-600 self-start">
+        CS @ UWaterloo
       </h2>
     </SectionWrapper>
   );
